@@ -51,16 +51,16 @@ if __name__ == '__main__':
 	::>::enter your id in place of user_id
 	::>::enter your password in place of user_pass
 	::>::enter mess no to register to; 	Enter:	1 (for Mess 1)
-										   		2 (for Mess 2)	
+					   		2 (for Mess 2)	
 	::>::to turn on do not disturb mode:
-			in dnd mode, you    > would be registered to your mess
-							      without any chrome pop outs (occuring
-							      every 10 seconds) 
-							    > won't be able to see how fast you are
-							      registed to mess :p
-			write: True  to enable  dnd mode
-				   False to disable dnd mode
-				   		'T' and 'F' in capitals
+		     *	in dnd mode, you    > would be registered to your mess
+				              without any chrome pop outs (occuring
+					      every 10 seconds) 
+					    > won't be able to see how fast you are
+					      registed to mess :p
+		     *	write: True  to enable  dnd mode
+			       False to disable dnd mode
+			       'T' and 'F' in capitals
 	::>::EXP: 
 			try_to_register('f201yxxx','*****', 1, True)
 			id no and password IN quotes
