@@ -5,7 +5,7 @@ Works for `linux` not tested for `Windows`
 
 ### Installion(for Ubuntu)
 
-    $sudo apt install python3-pip
+    $sudo apt install python-pip
     $sudo pip3 install -U selenium
    
 Now, you need to install the following webdrivers for `Selenium`:
@@ -26,7 +26,7 @@ You also need to have google-chrome installed to use chromedriver
 
 ##### Now you can run the code as
  
-    $python3 register_me.py    
+    $python register_me.py    
  
 and you would be registered to desired mess.
 
@@ -37,7 +37,7 @@ and you would be registered to desired mess.
 
 Press Windows(or Super) button on keyboard and search for startup applications, click add and fill in details as shown in image below:
 
-[![Screenshot from 2017-03-14 19-03-50.png](https://s29.postimg.org/5324vrxlj/Screenshot_from_2017_03_14_19_03_50.png)](https://postimg.org/image/nimlt6bpv/)
+[![Screenshot from 2017-04-11 01-15-44.png](https://s9.postimg.org/8m5gbob1r/Screenshot_from_2017-04-11_01-15-44.png)](https://postimg.org/image/52jilv8bv/)
 
 You may not add it to startup application but if you add it you never need to worry about mess registration again.
 ##### Just make sure that if you add it to startup do_not_disturb flag is set to `True` in line 70 in the code.
