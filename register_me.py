@@ -1,7 +1,7 @@
 import os, time, gtk
 from selenium import webdriver
 
-def register(user_id, user_pass, mess_no, do_not_disturb):
+def try_to_register(user_id, user_pass, mess_no, do_not_disturb):
 	#select the driver
 	if do_not_disturb == True:
 		driver = webdriver.PhantomJS()
@@ -35,9 +35,9 @@ def register(user_id, user_pass, mess_no, do_not_disturb):
 	
 	return break_variable,driver
 
-def try_to_register(user_id, user_pass, mess_no, do_not_disturb):
+def register(user_id, user_pass, mess_no, do_not_disturb):
 	while(1):
-		break_variable, driver = register(user_id,user_pass, mess_no, do_not_disturb)
+		break_variable, driver = try_to_register(user_id,user_pass, mess_no, do_not_disturb)
 		if break_variable == 0:
 			break
 		else:
@@ -45,13 +45,13 @@ def try_to_register(user_id, user_pass, mess_no, do_not_disturb):
 		time.sleep(10)
 
 if __name__ == '__main__':
-		
-	user_id = '201yxxx'
+	
+	user_id = 'f201yxxx'
 	user_pass = 'user_pass'
 	mess_number = 1
 	do_not_disturb = True
 	"""
-	::>::enter your id in place of 201yxxx
+	::>::enter your id in place of user_id
 	::>::enter your password in place of user_pass
 	::>::enter mess no to register to; 	Enter:	1 (for Mess 1)
 												2 (for Mess 2)	
