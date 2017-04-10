@@ -38,7 +38,3 @@ and you would be registered to desired mess.
 Press Windows(or Super) button on keyboard and search for startup applications, click add and fill in details as shown in image below:
 
 [![Screenshot from 2017-04-11 01-15-44.png](https://s9.postimg.org/8m5gbob1r/Screenshot_from_2017-04-11_01-15-44.png)](https://postimg.org/image/52jilv8bv/)
-
-You may not add it to startup application but if you add it you never need to worry about mess registration again.
-##### Just make sure that if you add it to startup do_not_disturb flag is set to `True` in line 70 in the code.
->###### NOTE: Error handling part needs to be checked.
