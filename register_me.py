@@ -35,7 +35,7 @@ def register(user_id, user_pass, mess_no, do_not_disturb):
 	
 	return break_variable,driver
 
-def try_to_register(user_id, user_pass, mess_no, do_not_disturb=True):
+def try_to_register(user_id, user_pass, mess_no, do_not_disturb):
 	while(1):
 		break_variable, driver = register(user_id,user_pass, mess_no, do_not_disturb)
 		if break_variable == 0:
@@ -46,26 +46,26 @@ def try_to_register(user_id, user_pass, mess_no, do_not_disturb=True):
 
 if __name__ == '__main__':
 		
-	user_id = 'user_id'
+	user_id = '201yxxx'
 	user_pass = 'user_pass'
 	mess_number = 1
 	do_not_disturb = True
 	"""
-	::>::enter your id in place of user_id
+	::>::enter your id in place of 201yxxx
 	::>::enter your password in place of user_pass
 	::>::enter mess no to register to; 	Enter:	1 (for Mess 1)
-										   		2 (for Mess 2)	
+												2 (for Mess 2)	
 	::>::to turn on do not disturb mode:
-			in dnd mode, you    >	would be registered to your mess
-							     	without any chrome pop outs (occuring
-							     	every 10 seconds) 
-							    >	won't be able to see how fast you are
-							     	registed to mess :p
-			write: True  to enable  dnd mode
-				   False to disable dnd mode
-				   'T' and 'F' in capitals
+			in dnd mode, you	>	would be registered to your mess
+									without any chrome pop outs (occuring
+									every 10 seconds) 
+								>	won't be able to see how fast you are
+									registed to mess :p
+			write:	True  to enable  dnd mode
+					False to disable dnd mode
+					'T' and 'F' in capitals
 	"""
-	register(user_id, user_pass, mess_number=1, do_not_disturb=True)
+	register(user_id, user_pass, mess_number, do_not_disturb)
 	dialog = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,'Registered to Mess: '+str(mess_number))
 	dialog.run()
 	dialog.destroy()
