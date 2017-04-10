@@ -1,4 +1,4 @@
-import os, time
+import os, time, gtk
 from selenium import webdriver
 
 def register(user_id, user_pass, mess_no, do_not_disturb):
@@ -35,36 +35,37 @@ def register(user_id, user_pass, mess_no, do_not_disturb):
 	
 	return break_variable,driver
 
-def try_to_register(user_id, user_pass, mess_no, do_not_disturb=False):
-	print("Registration process started...")
+def try_to_register(user_id, user_pass, mess_no, do_not_disturb=True):
 	while(1):
 		break_variable, driver = register(user_id,user_pass, mess_no, do_not_disturb)
 		if break_variable == 0:
-			print("REGISTERED TO MESS: " + str(mess_no))
 			break
 		else:
 			driver.close()
 		time.sleep(10)
 
 if __name__ == '__main__':
+		
+	user_id = 'user_id'
+	user_pass = 'user_pass'
+	mess_number = 1
+	do_not_disturb = True
 	"""
 	::>::enter your id in place of user_id
 	::>::enter your password in place of user_pass
 	::>::enter mess no to register to; 	Enter:	1 (for Mess 1)
 										   		2 (for Mess 2)	
 	::>::to turn on do not disturb mode:
-			in dnd mode, you    > would be registered to your mess
-							      without any chrome pop outs (occuring
-							      every 10 seconds) 
-							    > won't be able to see how fast you are
-							      registed to mess :p
+			in dnd mode, you    >	would be registered to your mess
+							     	without any chrome pop outs (occuring
+							     	every 10 seconds) 
+							    >	won't be able to see how fast you are
+							     	registed to mess :p
 			write: True  to enable  dnd mode
 				   False to disable dnd mode
-				   		'T' and 'F' in capitals
-	::>::EXP: 
-			try_to_register('f201yxxx','*****', 1, True)
-			id no and password IN quotes
-			mess no and True/False are WITHOUT quotes
+				   'T' and 'F' in capitals
 	"""
-	
-	try_to_register('user_id','user_pass', 1, True)
+	register(user_id, user_pass, mess_number=1, do_not_disturb=True)
+	dialog = gtk.MessageDialog (None, 0, gtk.MESSAGE_INFO, gtk.BUTTONS_OK,'Registered to Mess: '+str(mess_number))
+	dialog.run()
+	dialog.destroy()
